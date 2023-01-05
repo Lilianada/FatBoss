@@ -280,10 +280,8 @@ img {
 }
 
 .promo-image img {
-  width: 100%;
-  height: auto;
-  max-width: 200px;
-  max-height: 250px;
+  width: 300px;
+  height: 400px;
 }
 
 .promo-head {
@@ -408,9 +406,16 @@ img {
 .grid-images{
   background: var(--black);
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   padding: 2rem 0;
 }
+
+@media screen and (min-width: 900px) {
+  .grid-images{
+    grid-template-columns: repeat(8, 1fr);
+  }
+}
+  
 
 /* Devices section */
 .devices-section {
@@ -429,10 +434,10 @@ img {
 
 .devices-head{
   color: var(--white);
-  font-size: 80px;
+  font-size: 60px;
   font-weight: 700;
-  line-height: 5rem;
-  margin-bottom: 0.5rem;
+  line-height: 3rem;
+  margin-bottom: 1.5rem;
 }
 
 .devices-subHead{
@@ -442,7 +447,7 @@ img {
 }
 
 .devices-image {
-  width: 100%;
+  /* width: 100%; */
   height: 100%;
   margin: 0;
 }
@@ -450,8 +455,8 @@ img {
 .devices-image img {
   width: 100%;
   height: auto;
-  max-width: 200px;
-  max-height: 250px;
+  width: 300px;
+  height: 450px;
 }
 
 .devices-text {
@@ -465,6 +470,12 @@ img {
   .devices-section{
     flex-direction: row;
     margin: 2rem;
+  }
+
+  .devices-head{
+    font-size: 80px;
+    line-height: 5rem;
+    margin-bottom: 0.5rem;
   }
 
   .devices-text {
@@ -491,12 +502,16 @@ img {
   align-items: center;
   justify-content: center;
   background-image: url(./images/bg-img/Lord_Commander___black_background_for_online_gambling_landinge__d2fc2233-7702-4134-982d-13a60d0b2d3b.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   padding: 2rem 1.5rem;
   gap: 2rem;
 }
 
 .review-text {
   width: 100%;
+  text-align: center;
 }
 
 .review-head {
@@ -513,11 +528,65 @@ img {
   margin-bottom: 24px;
 }
 
-.review-text {
-  font-size: 16px;
-  font-weight: 400;
-  text-transform: none;
+.reviews{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
+
+.review-flex{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.review-wrap{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  min-height: 250px;
+  gap: .5rem;
+  padding: 1rem;
+  background: rgb(255 255 255 / 81%);
+  border-radius: 50px;
+}
+
+.empty{
+  display: none;
+}
+
+.wrap-head{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 16px;
+  width: 100%;
+}
+
+.wrap-subHead{
+  display: flex;
+  align-items: center;
+}
+
+.profile-img{
+  width: 3rem;
+  height: 3rem;
+  margin-right: .75rem;
+  border-radius: 50%;
+}
+
+.name-date .name, .name-date .date, .review-para{
+  color: var(--black);
+  font-size: 16px;
+}
+
+.star-img{
+  width: 3rem;
+}
+
 
 @media screen and (min-width: 768px) {
   .review-section {
@@ -527,6 +596,38 @@ img {
   .review-text {
     font-size: 28px;
   }
+
+  .reviews{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .wrap-head{
+    font-size: 18px;
+  }
+
+  .name-date .name, .name-date .date, .review-para{
+    font-size: 18px;
+  }
+  
+  .empty{
+    height: 3rem;
+    display: block;
+  }
+
+  .profile-img{
+    width: 5rem;
+    height: 5rem;
+  }
+
+  .star-img{
+    width: 5rem;
+  }
+
+  .review-wrap{
+    width: 380px;
+  }
+
 }
 
 

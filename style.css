@@ -1,0 +1,397 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+/*------------ [_Reset_Styles] -----------*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: "The Godfather";
+  src: url("fonts/TheGodfather-v2.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Intro";
+  src: url("fonts/Intro.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*===========rooot==========*/
+:root {
+  /* Fonts */
+  --head-font: "The Godfather", "Roboto", sans-serif;
+  --body-font: "Intro", "Roboto", sans-serif;
+
+  /* Colors */
+  --white: #fff;
+  --black: #151713;
+}
+
+/*=========UTILITIES===========*/
+
+body {
+  max-width: 2560px;
+  height: 100vh;
+  background-color: var(--bodyBg-color);
+  font-family: var(--font);
+  color: var(--bodyTxt-color);
+  letter-spacing: -0.5px;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0;
+  margin: 0;
+}
+
+/* Apply the 'The Godfather' font to all headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--head-font);
+}
+
+/* Apply the 'Intro' font to all h2 elements */
+h2 {
+  font-family: var(--body-font);
+}
+
+p {
+  color: var(--white);
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  font-family: var(--font);
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  border: none;
+  max-width: 100%;
+  background-position: center;
+  background-size: cover;
+}
+
+/* 
+  Navbar
+  ----------------------------------------------------------
+*/
+
+/* Make the navbar and hero banner full width and flexible */
+.navbar,
+.hero {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Make the navbar sticky to the top of the page on larger screens */
+.navbar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: #151713;
+  padding: 1rem;
+}
+
+/* Style the logo */
+.logo {
+  display: inline-block;
+  width: 100px;
+  height: 22px;
+  background-image: url("images/logo/fat-boss-logo.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-right: 16px;
+}
+
+/* Style the navbar links and button */
+.navlist {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navlink,
+.navbutton {
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.navlink {
+  font-family: var(--head-font);
+  font-size: 28px;
+  color: var(--white);
+  padding: 8px 16px;
+  margin-right: 14px;
+  text-transform: uppercase;
+}
+
+.navbutton {
+  display: flex;
+  align-items: center;
+  height: 2.2rem;
+  width: fit-content;
+  font-family: var(--body-font);
+  font-size: 24px;
+  font-weight: 400;
+  letter-spacing: 1.5px;
+  text-align: center;
+  color: var(--white);
+  margin-right: 20px;
+  padding: 0 8px;
+  background-color: #c81626;
+  border-radius: 8px;
+  border: 1px solid #cdb42873;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Style the navbar on larger screens */
+/* Stack the links in the navbar vertically and make them full width on smaller screens */
+@media (min-width: 768px) {
+  .navbar {
+    flex-direction: row;
+  }
+  .navlist {
+    flex-direction: row;
+  }
+}
+
+/* 
+  Hero banner
+  ----------------------------------------------------------
+*/
+
+/* Make the hero banner a fixed size */
+.hero {
+  height: 500px; /* Adjust the height to your desired size */
+  background-position: left top; /* Anchor the left side of the image to the top of the hero banner*/
+  background-size: cover; /* Fill the hero banner with the image */
+  background-image: url("images/hero/hero-image-1.png");
+}
+
+/* Make the hero banner take up the full width of the viewport */
+@media (min-width: 768px) {
+  .hero {
+    width: 100%;
+  }
+}
+
+/* Center the hero content vertically and horizontally */
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  /* align-items: flex-end; */
+  justify-content: center;
+  height: 100%;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: 0;
+  padding: 2rem;
+  color: white;
+  text-align: center;
+}
+
+/* Style the hero header and subheader */
+.hero-header {
+  color: #ffffff;
+  font-size: 112px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.fat-boss {
+  color: #c81626;
+}
+
+.hero-subheader {
+  color: #ffffff;
+  font-size: 26px;
+  margin-bottom: 32px;
+}
+
+/* Style the hero button */
+.hero-button {
+  color: #ffffff;
+  font-size: 20px;
+  font-family: var(--body-font);
+  text-decoration: none;
+  background-color: #617c7e;
+  border-radius: 15px;
+  border: none;
+  padding: 12px;
+  margin: 0 auto;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Main Content */
+.main-content{
+  background-color: var(--black);
+}
+
+/* --Promo section-- */
+.promo-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--black);
+  padding: 2rem;
+  padding-bottom: 2rem;
+}
+
+.promo-text {
+  width: 100%;
+  text-align: center;
+}
+
+.promo-image {
+  width: 50%;
+  margin: 0;
+}
+
+.promo-image img {
+  width: 100%;
+  height: auto;
+  max-width: 200px;
+  max-height: 250px;
+}
+
+.promo-head {
+  color: var(--white);
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.promo-subHead {
+  color: var(--white);
+  font-size: 24px;
+  margin-bottom: 32px;
+}
+
+.promo-para {
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: none;
+}
+
+.promo-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.2rem;
+  width: fit-content;
+  font-family: "Roboto", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-align: center;
+  color: var(--white);
+  margin-top: 16px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0 8px;
+  background-color: #c81626;
+  border-radius: 8px;
+  border: 1px solid #cdb42873;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+@media screen and  (min-width: 768px) {
+  .promo-text {
+    width: 60%;
+    text-align: left;
+  }
+
+  .promo-image img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  .promo-head{
+    font-size: 68px;
+  }
+
+  .promo-subHead{
+    font-size: 28px;
+  }
+
+  .promo-para {
+    font-size: 28px;
+  }
+}
+
+/*  -- Games section  */
+.games-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--black);
+  padding: 2rem;
+}
+
+.games-head{
+  color: var(--white);
+  font-size: 80px;
+  font-weight: 700;
+}
+
+.games-subHead{
+  color: var(--white);
+  font-size: 24px;
+  margin-bottom: 32px;
+}
+
+.games-text {
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: none;
+}
+
+@media screen and (min-width: 768px) {
+  .games-text {
+    font-size: 28px;
+  }
+}
+
+/* GAMES Images */
+.grid-images{
+  background: var(--black);
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  padding: 2rem 0;
+}

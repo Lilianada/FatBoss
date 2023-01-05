@@ -484,3 +484,99 @@ img {
   }
 }
 
+/* Review Section */
+.review-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url(./images/bg-img/Lord_Commander___black_background_for_online_gambling_landinge__d2fc2233-7702-4134-982d-13a60d0b2d3b.png);
+  padding: 2rem 1.5rem;
+  gap: 2rem;
+}
+
+.review-text {
+  width: 100%;
+}
+
+.review-head {
+  color: var(--white);
+  font-size: 80px;
+  font-weight: 700;
+  line-height: 5rem;
+  margin-bottom: 0.5rem;
+}
+
+.review-subHead {
+  color: var(--white);
+  font-size: 24px;
+  margin-bottom: 24px;
+}
+
+.review-text {
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: none;
+}
+
+@media screen and (min-width: 768px) {
+  .review-section {
+    padding: 2rem;
+  }
+
+  .review-text {
+    font-size: 28px;
+  }
+}
+
+
+/* Payment Section */
+.payment-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image:url(./images/body/bitcoin-slotmachine.png);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: cover;
+  padding: 2rem 1.5rem;
+  gap: 2rem;
+}
+
+.payment-text {
+  width: 100%;
+}
+
+.payment-head {
+  color: var(--white);
+  font-size: 80px;
+  font-weight: 700;
+  line-height: 5rem;
+  margin-bottom: 0.5rem;
+}
+
+.payment-subHead {
+  color: var(--white);
+  font-size: 24px;
+  margin-bottom: 24px;
+}
+
+.payment-text {
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: none;
+}
+
+@media screen and (min-width: 768px) {
+  .payment-section {
+    padding: 2rem;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  .payment-text {
+    font-size: 28px;
+    width: 60%;
+  }
+}

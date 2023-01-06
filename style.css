@@ -206,6 +206,10 @@ img {
   justify-content: space-between;
 }
 
+.navitem{
+  margin: 1rem 1rem .5rem;
+}
+
 .navlink,
 .navbutton {
   text-decoration: none;
@@ -219,8 +223,9 @@ img {
   font-size: 28px;
   font-weight: 400;
   color: var(--white);
-  padding: 8px 16px;
-  margin-right: 14px;
+  letter-spacing: 1px;
+  /* padding: 8px 16px;
+  margin-right: 14px; */
   text-transform: uppercase;
 }
 
@@ -235,13 +240,35 @@ img {
   letter-spacing: 1.5px;
   text-align: center;
   color: var(--white);
-  margin-right: 20px;
   padding: 0 8px;
   background-color: #c81626;
   border-radius: 8px;
   border: 1px solid #cdb42873;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
 }
+
+/* Style the language flags */
+.select-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 3rem;
+  height: fit-content;
+  padding: .5rem;
+  background: #ddcfcf;
+  border-radius: 8px;
+}
+
+.flag{
+  width: 1.5rem;
+  height: 1.5rem;
+  cursor: pointer;
+}
+
+.pl{margin-bottom: .5rem;}
+
+
 
 /* Style the navbar on larger screens */
 /* Stack the links in the navbar vertically and make them full width on smaller screens */
@@ -438,7 +465,7 @@ img {
 .games-head {
   color: var(--white);
   font-size: 80px;
-  text-align: center;
+  text-align: left;
   line-height: 5rem;
   margin-bottom: 0.5rem;
 }
@@ -447,6 +474,7 @@ img {
   color: var(--white);
   font-size: 24px;
   margin-bottom: 28px;
+  text-align: left;
 }
 
 .games-text {
@@ -462,6 +490,10 @@ img {
 
   .games-text {
     font-size: 28px;
+  }
+
+  .games-head, .games-subHead {
+    text-align: center;
   }
 }
 

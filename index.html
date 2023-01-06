@@ -9,10 +9,11 @@
     />
     <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
     <link rel="icon" type="image/x-icon" href="./images/icons/favicon.png" />
-    <meta
+    <!-- <meta
       name="description"
       content="Welcome to Fat Boss Casino! Our online casino has all your favourite games, including slots, table games, and video poker. Fully licensed and regulated, join now and start winning big!"
-    />
+    /> -->
+    <meta name="description" content="Online casino games at Fat Boss Casino! Play your favourite slots, table games, &amp; video poker. Fully licensed &amp; regulated. Join now &amp; win big!">
     <script src="main.js"></script>
   </head>
 
@@ -41,9 +42,20 @@
               >Welcome Bonus</a
             >
           </li>
-          <li class="navitem">
-            <a href="/Polish.html" class="navbutton">Polish</a>
-          </li>
+          <div class="navitem">
+            <div class="select-container">
+              <ul>
+                <li lang-selection="PL" tooltip="PL" flow="down" class="flag pl">
+                  <img src="./images/icons/poland-flag-round-icon-32.png">
+                </li>
+            
+                <li lang-selection="EN" tooltip="EN" flow="down" onclick="onSelect(this)" class="flag" >
+                  <img src="./images/icons/united-states-of-america-flag-round-icon-32.png">
+                </li>
+            
+              </ul>
+            </div>
+            </div>
         </ul>
       </div>
     </header>

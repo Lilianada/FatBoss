@@ -1,10 +1,11 @@
 //header
 const toggle = document.querySelector(".nav-toggle");
-const navLinks = document.querySelector(".hamburger-list");
+const navList = document.querySelector(".hamburger-list");
+const navLinks = document.querySelectorAll(".navItem");
 
 toggle.addEventListener("click", () => {
   toggle.classList.toggle("change");
-  navLinks.classList.toggle("active");
+  navList.classList.toggle("active");
 });
 
 navLinks.forEach((link) => {

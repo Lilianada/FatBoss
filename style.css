@@ -120,7 +120,7 @@ img {
   flex-direction: column;
   width: 100%;
   height: fit-content;
-  position: fixed;
+  position: absolute;
   top: 4rem;
   padding: 1rem;
   z-index: 1;
@@ -207,7 +207,7 @@ img {
 }
 
 .navitem{
-  margin: 1rem 1rem .5rem;
+  margin: .5rem;
 }
 
 .navlink,
@@ -224,8 +224,6 @@ img {
   font-weight: 400;
   color: var(--white);
   letter-spacing: 1px;
-  /* padding: 8px 16px;
-  margin-right: 14px; */
   text-transform: uppercase;
 }
 
@@ -253,7 +251,7 @@ img {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  width: 3rem;
+  width: 4rem;
   height: fit-content;
   padding: .5rem;
   background: #ddcfcf;
@@ -261,9 +259,18 @@ img {
 }
 
 .flag{
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 100%;
   cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--black);
+  font-weight: 400;
+}
+
+.flag img{
+  height: 1.5rem;
+  margin-right: .25rem;
 }
 
 .pl{margin-bottom: .5rem;}
@@ -279,6 +286,9 @@ img {
   }
   .navlist {
     flex-direction: row;
+  }
+  .navitem{
+    margin: .5rem 0 1rem 1rem;
   }
 }
 

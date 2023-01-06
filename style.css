@@ -68,6 +68,7 @@ h4,
 h5,
 h6 {
   font-family: var(--head-font);
+  font-weight: 400;
 }
 
 /* Apply the 'Intro' font to all h2 elements */
@@ -216,6 +217,7 @@ img {
 .navlink {
   font-family: var(--head-font);
   font-size: 28px;
+  font-weight: 400;
   color: var(--white);
   padding: 8px 16px;
   margin-right: 14px;
@@ -274,7 +276,6 @@ img {
 .hero-content {
   display: flex;
   flex-direction: column;
-  /* align-items: flex-end; */
   justify-content: center;
   height: 100%;
   width: fit-content;
@@ -289,7 +290,6 @@ img {
 .hero-header {
   color: #ffffff;
   font-size: 112px;
-  font-weight: bold;
   margin-bottom: 16px;
 }
 
@@ -350,7 +350,6 @@ img {
 .promo-head {
   color: var(--white);
   font-size: 48px;
-  font-weight: bold;
   margin-bottom: 16px;
 }
 
@@ -438,7 +437,6 @@ img {
 .games-head {
   color: var(--white);
   font-size: 80px;
-  font-weight: 700;
   line-height: 5rem;
   margin-bottom: 0.5rem;
 }
@@ -507,7 +505,6 @@ img {
 .offer-head {
   color: var(--white);
   font-size: 60px;
-  font-weight: 700;
   line-height: 3rem;
   margin-bottom: 1.5rem;
 }
@@ -555,19 +552,18 @@ img {
   flex-direction: column-reverse;
   align-items: center;
   justify-content: center;
-  background-color: var(--black);
-  margin: 3rem 1.5rem;
-  gap: 2rem;
+  gap: 0rem;
+  padding-top: 2rem;
 }
 
 .devices-text {
   width: 100%;
+  padding: 0 1.5rem;
 }
 
 .devices-head {
   color: var(--white);
   font-size: 60px;
-  font-weight: 700;
   line-height: 3rem;
   margin-bottom: 1.5rem;
 }
@@ -575,13 +571,13 @@ img {
 .devices-subHead {
   color: var(--white);
   font-size: 24px;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
 }
 
 .devices-image {
-  /* width: 100%; */
   height: 100%;
-  margin: 0;
+  margin-left: 0;
+  margin-right: auto;
 }
 
 .devices-image img {
@@ -601,12 +597,14 @@ img {
   .devices-section {
     flex-direction: row;
     margin: 3rem 2rem;
+    gap: 2rem;
+    padding-top: 0;
   }
 
   .devices-head {
     font-size: 80px;
-    line-height: 5rem;
-    margin-bottom: 0.5rem;
+    line-height: 4rem;
+    margin-bottom: 1rem;
   }
 
   .devices-text {
@@ -648,7 +646,6 @@ img {
 .review-head {
   color: var(--white);
   font-size: 80px;
-  font-weight: 700;
   line-height: 5rem;
   margin-bottom: 0.5rem;
 }
@@ -784,15 +781,14 @@ img {
 .payment-head {
   color: var(--white);
   font-size: 80px;
-  font-weight: 700;
-  line-height: 5rem;
-  margin-bottom: 0.5rem;
+  line-height: 4.5rem;
+  margin-bottom: 1rem;
 }
 
 .payment-subHead {
   color: var(--white);
   font-size: 24px;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
 }
 
 .payment-text {

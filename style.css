@@ -36,6 +36,7 @@ html {
   /* Colors */
   --white: #fff;
   --black: #151713;
+  --red: #c81626;
 }
 
 /*=========UTILITIES===========*/
@@ -97,38 +98,76 @@ img {
 }
 
 /* ----------------Hamburger Menu-----------------*/
-.hamburger{
+.hamburger-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 2rem 1rem;
 }
 
-.hamburger-container{
+.nav-toggle {
   display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 1.25rem;
-    width: 2rem;
-    cursor: pointer;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 1.25rem;
+  width: 2rem;
+  cursor: pointer;
+}
+
+.hamburger-list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: fit-content;
+  position: fixed;
+  top: 4rem;
+  padding: 1rem;
+  z-index: 1;
+  /* font-size: var(--font-sixteen); */
+  transform: translateY(-150%);
+  transition: 0.5s;
+  justify-content: space-around;
+  background: var(--black);
+}
+
+.active {
+  transform: translateY(0);
+}
+
+.bar {
+  width: 30px;
+  height: 3px;
+  border-radius: 5px;
+  background: var(--white);
+  transition: 0.4s;
+}
+
+.change .bar {
+  display: block;
+  background: var(--red);
+}
+
+.change .b-one {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.change .b-two {
+  opacity: 0;
+}
+
+.change .b-three {
+  transform: translateY(-8.75px) rotate(-45deg);
+}
+
+@media screen and (min-width: 768px) {
+  .hamburger {
+    display: none;
   }
 
-  .hamburger-line{
-    height: 2px;
-    width: 100%;
-    background-color: var(--white);
+  .navbar {
+    display: flex;
   }
-
-  @media screen and (min-width: 768px) {
-    .hamburger{
-      display: none;
-    }
-
-    .navbar{
-      display: flex;
-    }
-  }
-    
+}
 
 /* ----------------------------Navbar----------------------------*/
 
@@ -218,7 +257,6 @@ img {
   }
 }
 
-
 /* Hero banner----------------------------------------------------------*/
 
 /* Make the hero banner a fixed size */
@@ -260,7 +298,7 @@ img {
 }
 
 .fat-boss {
-  color: #c81626;
+  color: var(--red);
 }
 
 .hero-subheader {
@@ -456,7 +494,7 @@ img {
   gap: 2rem;
 }
 
-.offer-image{
+.offer-image {
   background-image: url(./images/body/center.png);
   background-position: center;
   background-repeat: no-repeat;
@@ -507,10 +545,10 @@ img {
 }
 
 @media screen and (min-width: 768px) {
-  .offer-section{
+  .offer-section {
     margin: 3rem 2rem;
   }
-  .offer-image{
+  .offer-image {
     min-height: 500px;
   }
 }

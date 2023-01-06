@@ -13,6 +13,7 @@
       content="Welcome to Fat Boss Casino! Our online casino has all your favourite games, including slots, table games, and video poker. Fully licensed and regulated, join now and start winning big!"
     />
     <script src="main.js"></script>
+    <script src="script.js"></script>
   </head>
 
   <body class="main-wrapper">
@@ -361,19 +362,4 @@
       <!-- Footer content goes here -->
     </footer>
   </body>
-  <script>
-    const toggle = document.querySelector(".nav-toggle");
-    const navLinks = document.querySelector(".hamburger-list");
-
-    toggle.addEventListener("click", () => {
-      toggle.classList.toggle("change");
-      navLinks.classList.toggle("active");
-    });
-
-    navLinks.forEach((link) => {
-      link.addEventListener("click", () => {
-        document.body.classList.remove("active");
-      });
-    });
-  </script>
 </html>

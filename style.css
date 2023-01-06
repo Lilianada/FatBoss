@@ -123,7 +123,6 @@ img {
   top: 4rem;
   padding: 1rem;
   z-index: 1;
-  /* font-size: var(--font-sixteen); */
   transform: translateY(-150%);
   transition: 0.5s;
   justify-content: space-around;
@@ -162,10 +161,6 @@ img {
 @media screen and (min-width: 768px) {
   .hamburger {
     display: none;
-  }
-
-  .navbar {
-    display: flex;
   }
 }
 
@@ -250,6 +245,7 @@ img {
 /* Stack the links in the navbar vertically and make them full width on smaller screens */
 @media (min-width: 768px) {
   .navbar {
+    display: flex;
     flex-direction: row;
   }
   .navlist {

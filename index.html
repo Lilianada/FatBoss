@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
     <head>
         <meta charset="utf-8" />
         <title>Fat Boss Gambling</title>
@@ -12,6 +11,14 @@
     </head>
 
     <body class="main-wrapper">
+        <header class="hamburger">
+            <a href="https://fatbossgambling.ph" class="logo"></a>
+            <div class="hamburger-container">
+                <div class="hamburger-line"></div>
+                <div class="hamburger-line"></div>
+                <div class="hamburger-line"></div>
+            </div>
+        </header>
         <header class="navbar">
             <a href="https://fatbossgambling.ph" class="logo"></a>
             <ul class="navlist">
@@ -111,9 +118,7 @@
 
             <!-- Offer Section -->
             <section class="offer-section">
-                <div class="offer-image">
-                    <img src="images/body/center.png" alt="Fat Boss Online Casino" />
-                </div>
+                <div class="offer-image"></div>
                 <div class="offer-text">
                     <h1 class="offer-head">
                         <span class="fat-boss">“</span>
@@ -261,5 +266,18 @@
             <!-- Footer content goes here -->
         </footer>
     </body>
+    <script>
+        const navToggle = document.querySelector(".nav-toggle");
+        const navLinks = document.querySelectorAll(".nav-link");
 
+        navToggle.addEventListener("click", () => {
+            document.body.classList.toggle("nav-open");
+        });
+
+        navLinks.forEach((link) => {
+            link.addEventListener("click", () => {
+                document.body.classList.remove("nav-open");
+            });
+        });
+    </script>
 </html>

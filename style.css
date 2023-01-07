@@ -78,7 +78,7 @@ h2 {
 
 p {
   color: var(--white);
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto", "Segoe UI";
 }
 
 a {

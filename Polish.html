@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
         <link rel="icon" type="image/x-icon" href="./images/icons/favicon.png" />
+        <link rel= "stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <meta name="description"
             content="Welcome to Fat Boss Casino! Our online casino has all your favourite games, including slots, table games, and video poker. Fully licensed and regulated, join now and start winning big!" />
         <script src="main.js"></script>
@@ -38,23 +39,8 @@
           </li>
           <div class="navitem">
             <div class="select-container">
-              <ul>
-                <li
-                  lang-selection="PL"
-                  tooltip="PL"
-                  flow="down"
-                  class="flag pl"
-                >
-                  <a href="./Polish.html">
-                    <img src="./images/icons/poland-flag-round-icon-32.png" />
-                  </a>
-                  PL
-                </li>
-                <li
-                  lang-selection="EN"
-                  tooltip="EN"
-                  flow="down"
-                  onclick="onSelect(this)"
+              <div class="selected">
+                <div
                   class="flag"
                 >
                   <a href="./index.html">
@@ -63,6 +49,27 @@
                     />
                   </a>
                   EN
+                </div>
+                <i class="fa fa-caret-down" aria-hidden="true"></i>
+              </div>
+              <ul class="select-list">
+                <li
+                  class="flag"
+                >
+                  <a href="./index.html">
+                    <img
+                      src="./images/icons/united-states-of-america-flag-round-icon-32.png"
+                    />
+                  </a>
+                  EN
+                </li>
+                <li
+                  class="flag pl"
+                >
+                  <a href="./Polish.html">
+                    <img src="./images/icons/poland-flag-round-icon-32.png" />
+                  </a>
+                  PL
                 </li>
               </ul>
             </div>
@@ -88,19 +95,8 @@
         </li>
         <div class="navitem">
           <div class="select-container">
-            <ul>
-              <li
-                lang-selection="PL"
-                tooltip="PL"
-                flow="down"
-                class="flag pl"
-              >
-                <a href="./Polish.html">
-                  <img src="./images/icons/poland-flag-round-icon-32.png" />
-                </a>
-                PL
-              </li>
-              <li
+            <div class="selected">
+              <div
                 lang-selection="EN"
                 tooltip="EN"
                 flow="down"
@@ -113,7 +109,35 @@
                   />
                 </a>
                 EN
-              </li>
+              </div>
+              <i class="fa fa-caret-down" aria-hidden="true"></i>
+            </div>
+            <ul class="select-list">
+              <li
+              lang-selection="EN"
+              tooltip="EN"
+              flow="down"
+              onclick="onSelect(this)"
+              class="flag"
+              >
+              <a href="./index.html">
+                <img
+                src="./images/icons/united-states-of-america-flag-round-icon-32.png"
+                />
+              </a>
+              EN
+            </li>
+            <li
+              lang-selection="PL"
+              tooltip="PL"
+              flow="down"
+              class="flag pl"
+            >
+              <a href="./Polish.html">
+                <img src="./images/icons/poland-flag-round-icon-32.png" />
+              </a>
+              PL
+            </li>
             </ul>
           </div>
         </div>

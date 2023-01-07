@@ -246,7 +246,7 @@ img {
 }
 
 /* Style the language flags */
-.select-container {
+.select-container, .select-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -254,7 +254,7 @@ img {
   position: relative;
 }
 
-.selected{
+.selected, .selected-item{
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -262,23 +262,23 @@ img {
   height: 2rem;
   padding: .35rem .5rem;
   background: #ddcfcf;
-  border-bottom: 1px solid var(--white);
   cursor: pointer;
 }
 
-.selected .fa{
+.selected .fa, .selected-item .fa{
   font-size: 1.25rem;
   color: var(--black);
 }
 
-.select-list{
-  display: flex;
+.select-list, .select-dropdown{
+  display: none;
   flex-direction: column;
   align-items: center;
   width: 5rem;
   height: fit-content;
   padding: .5rem;
   background: #ddcfcf;
+  border-top: 1px solid var(--white);
   border-radius: 0 0 8px 8px;
   position: absolute;
   top: 2rem;
@@ -288,6 +288,10 @@ img {
   display: flex;
 }
 
+.wd-100{
+  width: 100%;
+}
+
 .flag{
   display: flex;
   justify-content: flex-start;
@@ -295,7 +299,6 @@ img {
   width: 100%;
   cursor: pointer;
   color: var(--black);
-  font-weight: 400;
 }
 
 .flag a{display: flex;}
@@ -303,6 +306,12 @@ img {
 .flag img{
   height: 1.25rem;
   margin-right: .25rem;
+}
+
+.text, .lang, .lang-text, .selected-text{
+  font-weight: 500;
+  font-size: 1rem;
+  font-family: var(--body-font);
 }
 
 .pl{margin-top: .5rem;}

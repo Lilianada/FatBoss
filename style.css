@@ -251,6 +251,7 @@ img {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  position: relative;
 }
 
 .selected{
@@ -261,7 +262,7 @@ img {
   height: 2rem;
   padding: .35rem .5rem;
   background: #ddcfcf;
-  border-radius: 8px;
+  border-bottom: 1px solid var(--white);
   cursor: pointer;
 }
 
@@ -271,14 +272,16 @@ img {
 }
 
 .select-list{
-  display: none;
+  display: flex;
   flex-direction: column;
   align-items: center;
   width: 5rem;
   height: fit-content;
   padding: .5rem;
   background: #ddcfcf;
-  border-radius: 8px;
+  border-radius: 0 0 8px 8px;
+  position: absolute;
+  top: 2rem;
 }
 
 .show{
@@ -302,7 +305,7 @@ img {
   margin-right: .25rem;
 }
 
-.pl{margin-bottom: .5rem;}
+.pl{margin-top: .5rem;}
 
 
 

@@ -15,11 +15,12 @@ navLinks.forEach((link) => {
 });
 
 //Onclick for Select language
-const selected = document.querySelector(".selected");
+const selected = document.querySelector(".select-containerg");
 const selectList = document.querySelector("select-list");
 
 selected.addEventListener("click", () => {
   selectList.classList.toggle("show");
+  console.log("clicked");
 });
 
 //Onclick for games Images

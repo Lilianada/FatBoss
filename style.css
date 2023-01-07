@@ -69,6 +69,7 @@ h5,
 h6 {
   font-family: var(--head-font);
   font-weight: 400;
+  letter-spacing: 1.5px;
 }
 
 /* Apply the 'Intro' font to all h2 elements */
@@ -514,9 +515,9 @@ img {
 
 .games-head {
   color: var(--white);
-  font-size: 80px;
+  font-size: 60px;
   text-align: left;
-  line-height: 5rem;
+  line-height: 3rem;
   margin-bottom: 0.5rem;
 }
 
@@ -540,6 +541,11 @@ img {
 
   .games-text {
     font-size: 28px;
+  }
+
+  .games-head{
+    font-size: 80px;
+    line-height: 5rem;
   }
 
   .games-head, .games-subHead {
@@ -739,8 +745,8 @@ img {
 
 .review-head {
   color: var(--white);
-  font-size: 80px;
-  line-height: 5rem;
+  font-size: 60px;
+  line-height: 3.5rem;
   margin-bottom: 0.5rem;
 }
 
@@ -820,6 +826,11 @@ img {
     font-size: 28px;
   }
 
+  .review-head {
+    font-size: 80px;
+    line-height: 5rem;
+  }
+
   .reviews {
     display: flex;
     flex-direction: row;
@@ -874,8 +885,8 @@ img {
 
 .payment-head {
   color: var(--white);
-  font-size: 80px;
-  line-height: 4.5rem;
+  font-size: 60px;
+  line-height: 3.5rem;
   margin-bottom: 1rem;
 }
 
@@ -901,5 +912,10 @@ img {
   .payment-text {
     font-size: 28px;
     width: 60%;
+  }
+
+  .payment-head {
+    font-size: 80px;
+    line-height: 5rem;
   }
 }

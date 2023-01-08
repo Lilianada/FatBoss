@@ -69,7 +69,7 @@ h5,
 h6 {
   font-family: var(--head-font);
   font-weight: 400;
-  letter-spacing: 1.5px;
+  letter-spacing: 1px;
 }
 
 /* Apply the 'Intro' font to all h2 elements */
@@ -338,7 +338,7 @@ img {
 /* Make the hero banner a fixed size */
 .hero {
   height: 500px; /* Adjust the height to your desired size */
-  background-position: left top; /* Anchor the left side of the image to the top of the hero banner*/
+  background-position: top left 30%; /* Anchor the left side of the image to the top of the hero banner*/
   background-size: cover; /* Fill the hero banner with the image */
   background-image: url("images/hero/hero-image-1.png");
 }
@@ -347,6 +347,7 @@ img {
 @media (min-width: 768px) {
   .hero {
     width: 100%;
+    background-position: top left ;
   }
 }
 
@@ -408,13 +409,15 @@ img {
   justify-content: space-between;
   align-items: center;
   background-color: var(--black);
-  margin: 3rem 1.5rem;
+  margin: 3rem 0rem;
   gap: 2rem;
 }
 
 .promo-text {
   width: 100%;
   text-align: center;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 
 .promo-image {
@@ -422,8 +425,8 @@ img {
 }
 
 .promo-image img {
-  width: 300px;
-  height: 400px;
+  width: 400px;
+  height: 500px;
 }
 
 .promo-head {
@@ -476,6 +479,7 @@ img {
   .promo-text {
     width: 60%;
     text-align: left;
+    padding: 0;
   }
 
   .promo-image {
@@ -517,7 +521,7 @@ img {
   color: var(--white);
   font-size: 60px;
   text-align: left;
-  line-height: 3rem;
+  line-height: 3.5rem;
   margin-bottom: 0.5rem;
 }
 
@@ -873,7 +877,7 @@ img {
   justify-content: center;
   background-image: url(./images/body/bitcoin-slotmachine.png);
   background-repeat: no-repeat;
-  background-position: right;
+  background-position: top right 18%;
   background-size: cover;
   padding: 3rem 1.5rem;
   gap: 2rem;
@@ -907,6 +911,7 @@ img {
     padding: 3rem;
     flex-direction: row;
     justify-content: flex-start;
+    background-position: top right;
   }
 
   .payment-text {

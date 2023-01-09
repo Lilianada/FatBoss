@@ -488,8 +488,8 @@ img {
   }
 
   .promo-image img {
-    width: 100%;
-    height: auto;
+    width: 390px;
+    height: 500px;
     max-width: 100%;
     max-height: 100%;
   }
@@ -568,6 +568,8 @@ img {
 .grid-images img {
   transition: all .5s;
   cursor: pointer;
+  width: 128px;
+  height: 169px;
 }
 
 .grid-images img:hover{
@@ -686,8 +688,6 @@ img {
 }
 
 .devices-image img {
-  width: 100%;
-  height: auto;
   width: 300px;
   height: 450px;
 }
@@ -721,10 +721,8 @@ img {
   }
 
   .devices-image img {
-    width: 100%;
-    height: auto;
-    max-width: 100%;
-    max-height: 100%;
+    width: 409px;
+    height: 598px;
   }
 }
 
@@ -818,7 +816,8 @@ img {
 }
 
 .star-img {
-  width: 3rem;
+  width: 3.5rem;
+  height: 3rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -862,6 +861,7 @@ img {
 
   .star-img {
     width: 5rem;
+    height: 4rem;
   }
 
   .review-wrap {

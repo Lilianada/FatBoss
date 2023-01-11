@@ -99,6 +99,29 @@ img {
   background-size: cover;
 }
 
+/* ---------Blikk Section------------- */
+.blik-section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  background-color: #ffffff;
+  background-image: linear-gradient(0deg, #656262 0%, #30302f 40%, #151713 83%);
+
+}
+
+.blik-head{
+  font-family: var(--body-font);
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.blik-logo{
+  width: 110px;
+  height: 50px;
+}
+
 /* ----------------Hamburger Menu-----------------*/
 .hamburger-container {
   display: flex;
@@ -451,7 +474,6 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* height: 2.2rem; */
   width: fit-content;
   font-family: "Roboto", sans-serif;
   font-size: 24px;
@@ -568,8 +590,8 @@ img {
 .grid-images img {
   transition: all .5s;
   cursor: pointer;
-  width: 128px;
-  height: 169px;
+  width: 100%;
+  height: 100%;
 }
 
 .grid-images img:hover{

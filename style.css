@@ -483,7 +483,7 @@ img {
   align-items: center;
   justify-content: center;
   width: fit-content;
-  font-family: "Roboto", sans-serif;
+  font-family: var(--body-font);
   font-size: 24px;
   font-weight: 700;
   letter-spacing: 1.5px;
@@ -656,7 +656,7 @@ img {
   justify-content: center;
   height: 2.8rem;
   width: fit-content;
-  font-family: "Roboto", sans-serif;
+  font-family: var(--body-font);
   font-size: 16px;
   font-weight: 700;
   letter-spacing: 1.5px;

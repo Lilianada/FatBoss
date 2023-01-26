@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
-
 /*------------ [_Reset_Styles] -----------*/
 *,
 *::before,
@@ -13,26 +11,47 @@ html {
   scroll-behavior: smooth;
 }
 
+/* ---------------Fonts----------------- */
+
 @font-face {
   font-family: "The Godfather";
-  src: url("fonts/TheGodfather-v2.ttf") format("truetype");
+  src: 
+    url("fonts/Godfather-custom.woff2") format("woff2"),
+    url("fonts/Godfather-custom.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Intro";
-  src: url("fonts/Intro.otf") format("opentype");
+  src: 
+    url("fonts/Intro-custom.woff2") format("woff2"),
+    url("fonts/Intro-custom.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
+@font-face {
+  font-family: "Garet-Book";
+  src: 
+    url("fonts/Garet-Book.woff2") format("woff2"),
+    url("fonts/Garet-Book.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+h1, h3, h4, h5, h6 {
+  font-family: "The Godfather";
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+h2 {
+  font-family: "Intro"; /* Specifying font-family for h2 elements */
+}
+
 /*===========rooot==========*/
 :root {
-  /* Fonts */
-  --head-font: "The Godfather", "Roboto", "Segoe UI";
-  --body-font: "Intro", "Roboto", "Segoe UI";
-
   /* Colors */
   --white: #fff;
   --black: #151713;
@@ -44,10 +63,10 @@ html {
 body {
   max-width: 2560px;
   height: 100vh;
+  margin: 0 auto;
   background-color: var(--black);
-  font-family: var(--body-font);
   color: var(--white);
-  letter-spacing: -0.5px;
+  letter-spacing: -0.5px
 }
 
 p,
@@ -61,31 +80,14 @@ h6 {
   margin: 0;
 }
 
-/* Apply the 'The Godfather' font to all headings */
-h1,
-h3,
-h4,
-h5,
-h6 {
-  font-family: var(--head-font);
-  font-weight: 400;
-  letter-spacing: 1px;
-}
-
-/* Apply the 'Intro' font to all h2 elements */
-h2 {
-  font-family: var(--body-font);
-}
-
 p {
   color: var(--white);
-  font-family: "Roboto", "Segoe UI";
+  font-family: "Garet-Book", san-serif;
 }
 
 a {
   text-decoration: none;
   color: inherit;
-  font-family: var(--font);
 }
 
 ul li {
@@ -100,34 +102,38 @@ img {
 }
 
 /* ---------Blikk Section------------- */
-.blik-section{
+.blik-section {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 10px;
   background-color: #ffffff;
   background-image: linear-gradient(0deg, #656262 0%, #30302f 40%, #151713 83%);
-
 }
 
-.blik-head{
+.blik-head {
   font-family: var(--body-font);
   font-size: 12px;
   font-weight: 400;
   text-transform: uppercase;
 }
 
-.blik-logo{
+.blik-logo {
   width: 60px;
   height: 25px;
 }
 
 @media screen and (min-width: 768px) {
-  .blik-section{
+  .blik-section {
     padding: 8px;
   }
-  .blik-head{font-size: 16px;}
-  .blik-logo{width: 110px; height: 50px;}
+  .blik-head {
+    font-size: 16px;
+  }
+  .blik-logo {
+    width: 110px;
+    height: 50px;
+  }
 }
 
 /* ----------------Hamburger Menu-----------------*/
@@ -147,20 +153,27 @@ img {
   cursor: pointer;
 }
 
+.nav-toggle .bar, .navlist .navlink {
+  font-family: "The Godfather";
+  }
+  .navlist .navbutton {
+  font-family: "Intro";
+  }
+
 .hamburger-list {
   display: flex;
   flex-direction: column;
   width: 100%;
   height: 20rem;
   position: absolute;
-  top: 4rem;
+  top: 8rem;
   padding: 1rem;
   z-index: 1;
   transform: translateY(-150%);
   transition: 0.5s;
   justify-content: space-around;
   background: var(--black);
-  opacity: .95;
+  opacity: 0.95;
 }
 
 .active {
@@ -225,7 +238,7 @@ img {
   display: inline-block;
   width: 100px;
   height: 22px;
-  background-image: url("images/logo/fat-boss-logo.png");
+  background-image: url("images/logo/fatboss-online-casino-logo.webp");
   background-size: contain;
   background-repeat: no-repeat;
   margin-right: 16px;
@@ -239,8 +252,8 @@ img {
   justify-content: space-between;
 }
 
-.navitem{
-  margin: .5rem;
+.navitem {
+  margin: 0.5rem;
 }
 
 .navlink,
@@ -252,7 +265,7 @@ img {
 }
 
 .navlink {
-  font-family: var(--head-font);
+  font-family: "The Godfather";
   font-size: 28px;
   font-weight: 400;
   color: var(--white);
@@ -264,6 +277,8 @@ img {
   display: flex;
   align-items: center;
   height: 2.2rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   font-family: var(--body-font);
   font-size: 24px;
@@ -279,7 +294,8 @@ img {
 }
 
 /* Style the language flags */
-.select-container, .select-wrapper {
+.select-container,
+.select-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -287,30 +303,33 @@ img {
   position: relative;
 }
 
-.selected, .selected-item{
+.selected,
+.selected-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 5rem;
   height: 2rem;
-  padding: .35rem .5rem;
+  padding: 0.35rem 0.5rem;
   background: transparent;
   cursor: pointer;
 }
 
-.selected .fa, .selected-item .fa{
+.selected .fa,
+.selected-item .fa {
   font-size: 1.25rem;
   color: var(--white);
 }
 
-.select-list, .select-dropdown{
+.select-list,
+.select-dropdown {
   display: none;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   width: 5rem;
   height: 4rem;
-  padding: .5rem;
+  padding: 0.5rem;
   background: transparent;
   border-top: 1px solid #fff3;
   border-radius: 0 0 8px 8px;
@@ -318,15 +337,15 @@ img {
   top: 2rem;
 }
 
-.show{
+.show {
   display: flex;
 }
 
-.wd-100{
+.wd-100 {
   width: 100%;
 }
 
-.flag{
+.flag {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -335,34 +354,38 @@ img {
   color: var(--white);
 }
 
-.flag a{display: flex;}
-
-.flag img{
-  height: 1.25rem;
-  margin-right: .25rem;
+.flag a {
+  display: flex;
 }
 
-.text, .lang, .lang-text, .selected-text{
+.flag img {
+  height: 1.25rem;
+  margin-right: 0.25rem;
+}
+
+.text,
+.lang,
+.lang-text,
+.selected-text {
   font-weight: 500;
   font-size: 1rem;
   font-family: var(--body-font);
 }
 
-
-/* Style the navbar on larger screens */
-/* Stack the links in the navbar vertically and make them full width on smaller screens */
-@media (min-width: 768px) {
-  .navbar {
-    display: flex;
-    flex-direction: row;
+  /* Style the navbar on larger screens */
+  /* Stack the links in the navbar vertically and make them full width on smaller screens */
+  @media screen and (min-width: 768px) {
+    .navbar {
+      display: flex;
+      flex-direction: row;
+    }
+    .navlist {
+      flex-direction: row;
+    }
+    .navitem {
+      margin-left: 1rem;
+    }
   }
-  .navlist {
-    flex-direction: row;
-  }
-  .navitem{
-    margin-left: 1rem;
-  }
-}
 
 /* Hero banner----------------------------------------------------------*/
 
@@ -371,15 +394,7 @@ img {
   height: 500px; /* Adjust the height to your desired size */
   background-position: top left 30%; /* Anchor the left side of the image to the top of the hero banner*/
   background-size: cover; /* Fill the hero banner with the image */
-  background-image: url("images/hero/hero-image-1.png");
-}
-
-/* Make the hero banner take up the full width of the viewport */
-@media (min-width: 768px) {
-  .hero {
-    width: 100%;
-    background-position: top left ;
-  }
+  background-image: url("images/hero/online-casino-games-fat-boss-hero.webp");
 }
 
 /* Center the hero content vertically and horizontally */
@@ -388,6 +403,8 @@ img {
   flex-direction: column;
   justify-content: center;
   height: 100%;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   margin-left: auto;
   margin-right: 0;
@@ -404,11 +421,24 @@ img {
   line-height: 5.5rem;
 }
 
+.polish-hero-header {
+  color: #ffffff;
+  font-size: 65px;
+  margin-bottom: 16px;
+  line-height: 4rem;
+}
+
 .fat-boss {
   color: var(--red);
 }
 
 .hero-subheader {
+  color: #ffffff;
+  font-size: 26px;
+  margin-bottom: 32px;
+}
+
+.polish-hero-subheader {
   color: #ffffff;
   font-size: 26px;
   margin-bottom: 32px;
@@ -426,6 +456,41 @@ img {
   padding: 12px;
   margin: 0 auto;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Make the hero banner take up the full width of the viewport */
+@media (min-width: 768px) {
+  .hero {
+    width: 100%;
+    background-position: top left;
+  }
+
+  .hero-content {
+    width: 60%;
+  }
+
+  .polish-hero-header {
+    font-size: 80px;
+    line-height: 5rem;
+  }
+
+  @media screen and (min-width: 1550px) {
+    .hero-content {
+      max-width: 1440px;
+      width: 60%;
+      margin: 0 auto;
+    }
+
+    .polish-hero-header {
+      font-size: 112px;
+      line-height: 6.5rem;
+    }
+
+    .hero-subheader,
+    .polish-hero-subheader {
+      font-size: 36px;
+    }
+  }
 }
 
 /* Main Content */
@@ -482,6 +547,8 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   font-family: var(--body-font);
   font-size: 24px;
@@ -537,6 +604,19 @@ img {
   }
 }
 
+@media screen and (min-width: 1550px) {
+  .promo-section {
+    justify-content: flex-end;
+    gap: 4rem;
+  }
+
+  .promo-image {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+}
+
 /*  -- Games section  */
 .games-section {
   display: flex;
@@ -563,8 +643,8 @@ img {
 }
 
 .games-text {
-  font-size: 16px;
   font-weight: 400;
+  font-size: 16px;
   text-transform: none;
 }
 
@@ -577,12 +657,21 @@ img {
     font-size: 28px;
   }
 
-  .games-head{
+  .games-head {
     font-size: 80px;
     line-height: 5rem;
   }
 
-  .games-head, .games-subHead {
+  .games-head,
+  .games-subHead {
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 1550px) {
+  .games-section {
+    max-width: 1440px;
+    margin: 3rem auto;
     text-align: center;
   }
 }
@@ -596,14 +685,14 @@ img {
 }
 
 .grid-images img {
-  transition: all .5s;
+  transition: all 0.5s;
   cursor: pointer;
   width: 100%;
   height: 100%;
 }
 
-.grid-images img:hover{
-  transform: scale(.9, .9);
+.grid-images img:hover {
+  transform: scale(0.9, 0.9);
 }
 
 @media screen and (min-width: 900px) {
@@ -624,7 +713,7 @@ img {
 }
 
 .offer-image {
-  background-image: url(./images/body/center.png);
+  background-image: url(./images/body/center.webp);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -634,7 +723,8 @@ img {
 
 .offer-text {
   width: 100%;
-  text-align: center;
+  display: grid;
+  place-items: center;
 }
 
 .offer-head {
@@ -642,6 +732,8 @@ img {
   font-size: 60px;
   line-height: 3rem;
   margin-bottom: 1.5rem;
+  display: flex;
+  text-align: center;
 }
 
 .offer-subHead {
@@ -655,6 +747,8 @@ img {
   align-items: center;
   justify-content: center;
   height: 2.8rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   font-family: var(--body-font);
   font-size: 16px;
@@ -698,7 +792,7 @@ img {
 
 .devices-head {
   color: var(--white);
-  font-size: 60px;
+  font-size: 55px;
   line-height: 3rem;
   margin-bottom: 1.5rem;
 }
@@ -723,9 +817,12 @@ img {
 }
 
 .devices-text {
-  font-size: 16px;
   font-weight: 400;
   text-transform: none;
+}
+
+.devices-para {
+  font-size: 16px;
 }
 
 @media screen and (min-width: 768px) {
@@ -741,9 +838,12 @@ img {
   }
 
   .devices-text {
-    font-size: 28px;
     padding: 0 2rem 2rem;
     width: 60%;
+  }
+
+  .devices-para {
+    font-size: 28px;
   }
 
   .devices-image {
@@ -756,13 +856,27 @@ img {
   }
 }
 
+@media screen and (min-width: 1550px) {
+  .devices-image {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin-right: 0;
+  }
+
+  .devices-text {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+}
+
 /* Review Section */
 .review-section {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-image: url(./images/bg-img/Lord_Commander___black_background_for_online_gambling_landinge__d2fc2233-7702-4134-982d-13a60d0b2d3b.png);
+  background-image: url(./images/bg-img/fatt-boss-pocker-chips.webp);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -855,10 +969,6 @@ img {
     padding: 3rem 2rem;
   }
 
-  .review-text {
-    font-size: 28px;
-  }
-
   .review-head {
     font-size: 80px;
     line-height: 5rem;
@@ -901,11 +1011,12 @@ img {
 
 /* Payment Section */
 .payment-section {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-image: url(./images/body/bitcoin-slotmachine.png);
+  background-image: url(./images/body/online-casino-bitcoin-slotmachine.webp);
   background-repeat: no-repeat;
   background-position: top right 18%;
   background-size: cover;
@@ -931,9 +1042,12 @@ img {
 }
 
 .payment-text {
-  font-size: 16px;
   font-weight: 400;
   text-transform: none;
+}
+
+.payment-para {
+  font-size: 16px;
 }
 
 @media screen and (min-width: 768px) {
@@ -945,12 +1059,242 @@ img {
   }
 
   .payment-text {
-    font-size: 28px;
     width: 60%;
   }
 
   .payment-head {
     font-size: 80px;
     line-height: 5rem;
+  }
+
+  .payment-para {
+    font-size: 28px;
+  }
+}
+
+@media screen and (min-width: 1550px) {
+  .payment-text {
+    margin: 0 auto;
+  }
+}
+
+/* POP-UP Modal */
+.popup-section {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: fixed;
+  z-index: 1;
+  right: 0rem;
+  top: 83%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: 1rem;
+  transform: scale(1.2);
+  opacity: 0;
+  transition: all 300ms ease-in-out;
+}
+
+.show-popup {
+  opacity: 1;
+  transform: scale(1);
+  -webkit-animation: bounceIn 0.6s linear;
+  animation: bounceIn 0.6s linear;
+}
+
+@-webkit-keyframes bounceIn {
+  0%,
+  20%,
+  40%,
+  60%,
+  80%,
+  to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  0% {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+  20% {
+    transform: scale3d(1.03, 1.03, 1.03);
+  }
+  40% {
+    transform: scale3d(0.9, 0.9, 0.9);
+  }
+  60% {
+    opacity: 1;
+    transform: scale3d(1.01, 1.01, 1.01);
+  }
+  80% {
+    transform: scale3d(0.97, 0.97, 0.97);
+  }
+  to {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+}
+
+@keyframes bounceIn {
+  0%,
+  20%,
+  40%,
+  60%,
+  80%,
+  to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  0% {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+  20% {
+    transform: scale3d(1.03, 1.03, 1.03);
+  }
+  40% {
+    transform: scale3d(0.9, 0.9, 0.9);
+  }
+  60% {
+    opacity: 1;
+    transform: scale3d(1.01, 1.01, 1.01);
+  }
+  80% {
+    transform: scale3d(0.97, 0.97, 0.97);
+  }
+  to {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+}
+
+.popup-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 10rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 5rem;
+  padding: 12px;
+  background: rgba(21, 0, 0, 0.689);
+  border-radius: 10px 0px 0px 10px;
+}
+
+.popup-text .popup-name {
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: "Segoe UI", "san-serif";
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin-bottom: 0.5rem;
+}
+
+.popup-text .popup-bold {
+  font-family: var(--body-font);
+  font-weight: 400;
+  font-size: 1.25rem;
+}
+
+.popup-figure {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #241416;
+  background-image: linear-gradient(0deg, #241416 16%, #820903 40%);
+  height: 5rem;
+  padding: 12px;
+  border-radius: 0px 10px 10px 0px;
+}
+
+.popup-figure .popup-name {
+  font-family: var(--body-font);
+  font-weight: 700;
+  font-size: 1.25rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.popup-figure .popup-bold {
+  font-family: var(--body-font);
+  font-size: 1.25rem;
+}
+
+@media screen and (min-width: 768px) {
+  .popup-text .popup-name,
+  .popup-figure .popup-name {
+    font-size: 1.25rem;
+  }
+
+  .popup-text .popup-bold {
+    font-size: 1.45rem;
+  }
+
+  .popup-figure .popup-bold {
+    font-size: 1.5rem;
+  }
+}
+
+/* Footer */
+footer {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.footer-text {
+  font-size: 16px;
+  font-family: var(--alt-font);
+  font-weight: 400;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--white);
+  margin-top: 1rem;
+}
+
+.footer-span {
+  color: var(--white);
+  font-size: 22px;
+  font-family: "Segoe UI", "san-serif";
+  font-weight: 400;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.footer-logo {
+  margin: 1rem;
+  display: flex;
+  align-items: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.footer-logo img {
+  width: 3rem;
+  height: 3rem;
+}
+
+.pg-rating {
+  height: 2rem;
+  padding: 0.15rem 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--white);
+  color: var(--black);
+  border-radius: 50%;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  footer {
+    width: 90%;
   }
 }
